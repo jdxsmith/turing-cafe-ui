@@ -14,7 +14,7 @@ class App extends Component {
 
   componentDidMount = async () => {
     await reservationData()
-    .then(currentReservations => this.setState({ reservations: currentReservations }))
+    .then(reservations => this.setState({ reservations: reservations }))
     .catch(error => console.log(error))
   }
 
