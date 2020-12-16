@@ -4,7 +4,7 @@ import './Reservations.css';
 const Reservations = ({ reservations }) => {
   const allReservations = reservations.map(reservation => {
     return (
-      <article className='reservation-card'>
+      <article className='reservation-card' key={reservation.id}>
         <p>{ reservation.name }</p>
         <p>{ reservation.date }</p>
         <p>{ reservation.time } pm</p>
@@ -15,7 +15,7 @@ const Reservations = ({ reservations }) => {
   })
 
   return (
-    <section>
+    <section className='reservations-container'>
       { allReservations }
     </section>
   )

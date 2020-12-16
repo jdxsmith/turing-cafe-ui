@@ -24,11 +24,9 @@ componentDidMount = async () => {
         <div className='resy-form'>
 
         </div>
-        <div className='resy-container'>
-          <Reservations
-            reservations={ this.state.reservations }
-          />
-        </div>
+        <Reservations
+          reservations={ this.state.reservations }
+        />
       </div>
     )
   }
