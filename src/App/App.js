@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { reservationData } from '../apiCalls.js';
+import { Reservations } from '../Reservations/Reservations.js'
 import './App.css';
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
 
 componentDidMount = async () => {
   await reservationData()
-  .then(reservations => this.setState({ reservations: reservations }))
+  .then(currentReservations => this.setState({ reservations: currentReservations }))
   .catch(error => console.log(error))
 }
 
@@ -24,7 +25,9 @@ componentDidMount = async () => {
 
         </div>
         <div className='resy-container'>
-          
+          <Reservations
+            reservations={ this.state.reservations }
+          />
         </div>
       </div>
     )
