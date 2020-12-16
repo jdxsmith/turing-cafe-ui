@@ -1,0 +1,21 @@
+.reservation-form {
+  margin-bottom: 50px;
+  width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.input-box {
+  height: 30px;
+  width: 180px;
+  border: 4px solid orange;
+  border-radius: 6px;
+}
+
+.make-reservation-btn {
+  border: 4px solid #038080;
+  background-color: #038080;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+}
